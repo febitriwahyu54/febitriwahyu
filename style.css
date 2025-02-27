@@ -1,0 +1,484 @@
+:root {
+    --primary: #331c1c;
+    --bg: #F6B165;
+    --sc: #fad2a8;
+    --third: #411e1e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    background-color: var(--bg);
+    color: black;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(218, 127, 43, 0.8);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+    text-transform: capitalize;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.5s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+
+}
+
+/* hero section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("img/im4.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* h1 p hero section */
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgb(246, 177, 101) 8%, rgba(213, 141, 87, 0) 50%);
+}
+
+.hero .conten {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .conten h1 {
+    font-size: 4em;
+    color: #fff;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.1;
+}
+
+.hero .conten h1 span {
+    color: var(--bg);
+}
+
+.hero .conten p {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    color: #fff;
+    mix-blend-mode: difference;
+}
+
+.hero .conten .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 1rem 3rem;
+    font-size: 1.4rem;
+    color: var(--bg);
+    text-transform: uppercase;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 3px rgba(218, 127, 43, 0.8);
+
+}
+
+/* about section */
+.about,
+.kontak,
+.menu {
+    padding: 10rem 7% 1.4rem;
+}
+
+.about h2,
+.kontak h2,
+.menu h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+}
+
+.about h2 span,
+.kontak h2 span,
+.menu h2 span {
+    color: #fff;
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+}
+
+.about .row .conten {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .conten h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .conten p {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+/* menu section */
+.kontak h2,
+.menu h2 {
+    margin-bottom: 1rem;
+}
+
+.menu p, .kontak p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 2;
+}
+
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: space-between;
+}
+.menu .row .menu-card {
+    text-align: center;
+    padding-bottom: 2rem;
+    width: 20%;
+}
+
+.menu .row .menu-card img {
+    border-radius: 50%;
+    border-style: groove;
+    border-color: #331c1c;
+    width: 100%;
+    
+}
+
+menu .row .menu-card .menu-card-title {
+    margin-top: 1.5rem auto 0.5rem;
+}
+
+menu .row .menu-card .menu-card-price {
+    margin: 1rem auto 0.5rem;
+}
+
+/* kontak seksion */
+.kontak .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: #fad2a8;
+}
+
+.kontak .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.kontak .row form {
+    flex: 1 1 45 rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.kontak .row form .input-grub {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: var(--bg);
+    border: 1px solid #fff;
+    padding-left: 2rem;
+}
+
+.kontak .row form .input-grub input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.7rem;
+    background: none;
+    color: var(--primary);
+    text-transform: capitalize;
+}
+
+.kontak .row form .btn {
+    margin-top: 3rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    background-color: var(--bg);
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 3px rgba(26, 18, 11, 0.8);
+    text-transform: uppercase;
+}
+
+/* footer */
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 3rem 0;
+    margin-top: 3rem;
+    border-style: dashed;
+    border-color: var(--sc);
+}
+
+footer .sosial {
+    padding: 1rem 0;
+}
+
+footer .sosial a {
+    color: var(--bg);
+    margin: 1rem;
+}
+
+footer .sosial a:hover {
+    color: var(--sc);
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+    text-transform: capitalize;
+}
+
+footer .links a:hover {
+    color: #fff;
+}
+
+footer .links a{
+    color: var(--bg);
+    margin: 1rem;
+}
+
+footer .kredit {
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+footer .kredit a {
+    color: var(--sc);
+    font-weight: 700;
+}
+
+/* media query */
+/* media query laptop*/
+@media (max-width : 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+/* media query tablet*/
+@media (max-width : 758px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(218, 127, 43, 0.8);
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: #fff;
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover::after {
+        transform: scaleX(0.2);
+    }
+
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .row .about-img img {
+        height: 24rem;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .about .row .conten {
+        padding: 0;
+    }
+
+    .about .row .conten h3 {
+        margin-top: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .menu p, .kontak p {
+        font-size: 1.2rem;
+    }
+
+    .kontak .row {
+        flex-wrap: wrap;
+    }
+
+    .kontak .row .map {
+        height: 30rem;
+    }
+
+    .kontak .row form {
+        width: 100%;
+    }
+
+    .kontak .row form .input-grub input {
+        width: 100%;
+        font-size: 2rem;
+        background: none;
+        color: var(--primary);
+        text-transform: capitalize;
+    }
+    .kontak .row form .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-size: 1.7rem;
+        cursor: pointer;
+        background-color: var(--bg);
+        border-radius: 0.5rem;
+        box-shadow: 2px 2px 3px rgba(26, 18, 11, 0.8);
+        text-transform: uppercase;
+    }
+    }
+    /* media query mobile*/
+    @media (max-width : 450px) {
+        html {
+            font-size: 55%;
+        }
+
+        .navbar .navbar-nav a {
+            color: #fff;
+            display: block;
+            margin: 1.5rem;
+            padding: 0.5rem;
+            font-size: 2rem;
+            text-transform: capitalize;
+        }
+
+        .navbar .navbar-nav a::after {
+            transform-origin: 0 0;
+        }
+        .navbar .navbar-nav a:hover::after {
+            transform: scaleX(0.2);
+        }
+
+
+        .menu .menu-card-title  {
+            font-size: 2rem;
+        }
+
+        .menu .row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .menu .row .menu-card {
+            width: 50%;
+        }
+        
+     }
