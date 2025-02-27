@@ -340,7 +340,7 @@ footer .sosial {
 }
 
 footer .sosial a {
-    color: var(--bg);
+    color: var(--primary);
     margin: 1rem;
 }
 
