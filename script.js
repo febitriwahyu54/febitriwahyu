@@ -1,3 +1,4 @@
+
 // togle class active hamburger menu
 const navbarnav = document.querySelector('.navbar-nav');
 // ketika hamburger menu diklik
@@ -12,15 +13,15 @@ document
 
 // togle class active untuk shopping cart button
 const shoppingcart = document.querySelector('.shopping-cart');
-const shoppingbuton = document.querySelector('#shopping-cart-button');
+
 document
     .querySelector('#shopping-cart-button')
     .onclick = (e) => {
         shoppingcart
             .classList
             .toggle('active');
-        e.preventDefault();
-    }
+      e.preventDefault();
+    };
     // togle class active untuk search form
     const searchform = document.querySelector('.search-form');
 const searchbox = document.querySelector('#search-box');
@@ -32,13 +33,15 @@ document
             .classList
             .toggle('active');
         searchbox.focus();
-        e.preventDefault();
+        
     };
 
 // klik diluar elemen
 const hm = document.querySelector('#hamburger-menu');
 const sb = document.querySelector('#search-button');
-const shb = document.querySelector('#shopping-cart-button');
+const scb = document.querySelector('#shopping-cart-button');
+
+
 document.addEventListener('click', function (e) {
     if (!hm.contains(e.target) && !navbarnav.contains(e.target)) {
         navbarnav
@@ -50,9 +53,13 @@ document.addEventListener('click', function (e) {
         searchform
             .classList
             .remove('active');
-    }
-    if(!shb.contains(e.target) && !shoppingbuton.contains(e.target)){
-    shoppingcart.classList.remove('active'); }
+    };
+    if (!scb.contains(e.target) && !shoppingcart.contains(e.target)) {
+        shoppingcart
+            .classList
+            .remove('active');
+    };
+      
 });
 
 // modal bok
